@@ -1,9 +1,9 @@
 {
-  "profiles": {
-    "FriendlyBotPluginSample": {
-        "commandName": "Executable",
-        "executablePath": "..\\FriendlyBotPluginSample\\FriendlyBot.exe",
-        "workingDirectory": "..\\FriendlyBotPluginSample"
+    "profiles": {
+        "FriendlyBot.FriendlySuite": {
+            "commandName": "Executable",
+            "executablePath": "..\\FriendlyBotRelease\\FriendlyBot.exe",
+            "workingDirectory": "..\\..\\FriendlyBotRelease"
+        }
     }
-  }
 }
