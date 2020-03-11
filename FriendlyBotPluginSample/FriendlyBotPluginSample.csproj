@@ -31,9 +31,11 @@
   <ItemGroup>
     <Reference Include="FriendlyBot.API">
       <HintPath>..\..\FriendlyBotRelease\FriendlyBot.API.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="FriendlyBot.SimpleAPI">
       <HintPath>..\..\FriendlyBotRelease\Plugins\netcoreapp3.0\FriendlyBot.SimpleAPI.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
 
