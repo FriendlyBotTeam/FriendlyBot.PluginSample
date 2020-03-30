@@ -1,8 +1,7 @@
-﻿using FriendlyBot.API.PluginsInterfaces;
-using FriendlyBot.API.Accounts;
+﻿using FriendlyBot.API.Accounts;
 using FriendlyBot.API.Attributes;
 
-[assembly: Plugin(typeof(FriendlyBotPluginSample.DofusBotPlugins.DofusBotPlugin), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot D2o", "Exemple par Nicogo", "Pseudo")]
+[assembly: Plugin(typeof(FriendlyBotPluginSample.PluginD2o), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot D2o", "Exemple par Nicogo", "Pseudo")]
 
 namespace FriendlyBotPluginSample
 {
@@ -14,7 +13,7 @@ namespace FriendlyBotPluginSample
         PluginD2o(IDofusAccount dofusAccount)
         {
             _dofusAccount = dofusAccount;
-            
+
             //Vous pouvez récup un D2o avec la fonction suivante et l'ID du D2o :
             int itemId = 0;
             var item = _dofusAccount.FriendlyAccount.FriendlyBotManager.D2o.GetData<FriendlyBot.API.DofusDatas.Item>(itemId);

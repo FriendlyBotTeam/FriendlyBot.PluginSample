@@ -1,8 +1,8 @@
-﻿using FriendlyBot.API.PluginsInterfaces;
-using FriendlyBot.API.Accounts;
+﻿using FriendlyBot.API.Accounts;
 using FriendlyBot.API.Attributes;
+using FriendlyBot.API.PluginsInterfaces;
 
-[assembly: Plugin(typeof(FriendlyBotPluginSample.DofusBotPlugins.DofusBotPlugin), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot Unloadable", "Exemple par Nicogo", "Pseudo")]
+[assembly: Plugin(typeof(FriendlyBotPluginSample.PluginUnloadable), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot Unloadable", "Exemple par Nicogo", "Pseudo")]
 
 namespace FriendlyBotPluginSample
 {

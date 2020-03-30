@@ -2,9 +2,9 @@
 using FriendlyBot.API.Attributes;
 using System.Linq;
 
-[assembly: Plugin(typeof(FriendlyBotPluginSample.FriendlyPlugins.FriendlyPlugin), FriendlyBot.API.Enums.PluginType.FriendlyPlugin, "Mon premier plugin Friendlybot", "Exemple par Nicogo", "Nicogo")]
+[assembly: Plugin(typeof(FriendlyBotPluginSample.FriendlyPlugin), FriendlyBot.API.Enums.PluginType.FriendlyPlugin, "Mon premier plugin Friendlybot", "Exemple par Nicogo", "Nicogo")]
 
-namespace FriendlyBotPluginSample.FriendlyPlugins
+namespace FriendlyBotPluginSample
 {
     class FriendlyPlugin //Plugin pouvant être charger uniquement depuis l'onglet principal "Plugins". Il apparait en noir et permet la gestion et l'automatisation de FriendlyBot ainsi que des bots.
     {
