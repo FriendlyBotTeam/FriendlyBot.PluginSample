@@ -18,6 +18,9 @@ namespace FriendlyBotPluginSample
             int itemId = 0;
             var item = _dofusAccount.FriendlyAccount.FriendlyBotManager.D2o.GetData<FriendlyBot.API.DofusDatas.Item>(itemId);
 
+            //pour avoir les "texts" (I18N, voir google) :
+            var itemName = _dofusAccount.FriendlyAccount.FriendlyBotManager.I18n.GetText(item.NameId);
+            var itemdescription = _dofusAccount.FriendlyAccount.FriendlyBotManager.I18n.GetText(item.DescriptionId);
 
             //Vous pouvez récup tous les D2o d'un type avec : (attention, fonction lente)
             var items = _dofusAccount.FriendlyAccount.FriendlyBotManager.D2o.GetDatas<FriendlyBot.API.DofusDatas.Item>();
