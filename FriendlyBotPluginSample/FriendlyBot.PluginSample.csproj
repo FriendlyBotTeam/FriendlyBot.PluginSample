@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Configurations>Debug;Release;DebugFriendlyBot;ReleasePublish</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\FriendlyBotRelease\Plugins</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutputPath>..\..\FriendlyBotRelease\Plugins</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\FriendlyBotRelease\Plugins</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutputPath>..\..\FriendlyBotRelease\Plugins</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugFriendlyBot|AnyCPU'">
+    <OutputPath>$(SolutionDir)FriendlyBot\bin\$(Configuration)\netcoreapp3.0\Plugins</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugFriendlyBot|x64'">
+    <OutputPath>$(SolutionDir)FriendlyBot\bin\$(Platform)\$(Configuration)\netcoreapp3.0\Plugins</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleasePublish|AnyCPU'">
+    <OutputPath>$(SolutionDir)FriendlyBot\bin\$(Configuration)\netcoreapp3.0\Plugins</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleasePublish|x64'">
+    <OutputPath>$(SolutionDir)FriendlyBot\bin\$(Platform)\$(Configuration)\netcoreapp3.0\Plugins</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="3 UI Avalonia\Views\ContentView.xaml" />
+    <None Remove="3 UI Avalonia\Views\HeaderView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="3 UI Avalonia\Views\ContentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 UI Avalonia\Views\HeaderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.9" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.9" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\FriendlyBot.SimpleAPI\FriendlyBot.SimpleAPI.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FriendlyBot\FriendlyBot.API\FriendlyBot.API.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>

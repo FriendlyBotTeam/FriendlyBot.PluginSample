@@ -2,9 +2,9 @@
 using FriendlyBot.API.Attributes;
 using FriendlyBot.API.PluginsInterfaces;
 
-[assembly: Plugin(typeof(FriendlyBotPluginSample.PluginUnloadable), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot Unloadable", "Exemple par Nicogo", "Pseudo")]
+[assembly: Plugin(typeof(FriendlyBot.PluginSample.PluginUnloadable), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot Unloadable", "Exemple par Nicogo", "Pseudo")]
 
-namespace FriendlyBotPluginSample
+namespace FriendlyBot.PluginSample
 {
     class PluginUnloadable : IUnloadable //Tout les plugins friendlyBot peuvent implémenté l'interface "IUnloadable".
     {

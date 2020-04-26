@@ -1,7 +1,7 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace FriendlyBotPluginSample.Views
+namespace FriendlyBot.PluginSample.Views
 {
     public class ContentView : UserControl
     {

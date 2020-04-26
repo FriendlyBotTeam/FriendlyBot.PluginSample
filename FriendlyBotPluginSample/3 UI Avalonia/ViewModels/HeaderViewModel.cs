@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace FriendlyBotPluginSample.ViewModels
+namespace FriendlyBot.PluginSample.ViewModels
 {
     public class HeaderViewModel : ReactiveObject
     {

@@ -1,9 +1,9 @@
 ﻿using FriendlyBot.API.Accounts;
 using FriendlyBot.API.Attributes;
 
-[assembly: Plugin(typeof(FriendlyBotPluginSample.PluginD2o), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot D2o", "Exemple par Nicogo", "Pseudo")]
+[assembly: Plugin(typeof(FriendlyBot.PluginSample.PluginD2o), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot D2o", "Exemple par Nicogo", "Pseudo")]
 
-namespace FriendlyBotPluginSample
+namespace FriendlyBot.PluginSample
 {
     class PluginD2o //Tout les plugins Peuvent utiliser les D2o, ce sont toutes les données de dofus.
     {

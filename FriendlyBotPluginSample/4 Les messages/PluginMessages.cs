@@ -2,11 +2,11 @@
 using FriendlyBot.API.Attributes;
 using FriendlyBot.API.PluginsInterfaces;
 
-[assembly: Plugin(typeof(FriendlyBotPluginSample.PluginMessages), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot qui utilise les packets", "Exemple par Nicogo", "Pseudo")]
+[assembly: Plugin(typeof(FriendlyBot.PluginSample.PluginMessages), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot qui utilise les packets", "Exemple par Nicogo", "Pseudo")]
 
-namespace FriendlyBotPluginSample
+namespace FriendlyBot.PluginSample
 {
-    class PluginMessages : IUnloadable 
+    class PluginMessages : IUnloadable
     {
         private IDofusAccount _dofusAccount;
         PluginMessages(IDofusAccount dofusAccount)
@@ -22,8 +22,8 @@ namespace FriendlyBotPluginSample
 
         #region Messages handler
 
-        [Message(typeof(FriendlyBot.API.DofusMessages.game.chat.IChatErrorMessage))] //permet à Friendlybot de savoir quel packet vous voulez attendre
-        public void HandleChatErrorMessage(FriendlyBot.API.DofusMessages.game.chat.IChatErrorMessage packet, FriendlyBot.API.MessageEvent e)
+        [Message(typeof(FriendlyBot.API.DofusMessages.Game.Chat.IChatErrorMessage))] //permet à Friendlybot de savoir quel packet vous voulez attendre
+        public void HandleChatErrorMessage(FriendlyBot.API.DofusMessages.Game.Chat.IChatErrorMessage packet, FriendlyBot.API.MessageEvent e)
         //l'argument "packet" du type INetworkMessage (ou du packet que vous attendez) contient toutes les données relative au packet "deserializé".
         //le e de trype MessageEvent contient les informations de provenances et de destination du packet, les données brutes ainsi que la possibilité d'annuler le packet à l'aide de la property "Cancel"
         {
@@ -43,7 +43,7 @@ namespace FriendlyBotPluginSample
             //PS : Si vous utilisez SimpleAPI, envoyé le packet via MessageAPI.SendMessage();
             //Cette fonction va vérifié que vous être dans les bonnes conditions avant d'envoyé le packet (par exemple, il faut être en combat avant de lancé un sort, ...)
         }
-        public class ChatClientPrivateMessage : FriendlyBot.API.DofusMessages.game.chat.IChatClientPrivateMessage //on défini notre packet à l'aide de l'interface du packet à envoyer.
+        public class ChatClientPrivateMessage : FriendlyBot.API.DofusMessages.Game.Chat.IChatClientPrivateMessage //on défini notre packet à l'aide de l'interface du packet à envoyer.
         {
             public int ProtocolId { get; } //fixé par friendlybot
             public string Content { get; set; } //le texte du message

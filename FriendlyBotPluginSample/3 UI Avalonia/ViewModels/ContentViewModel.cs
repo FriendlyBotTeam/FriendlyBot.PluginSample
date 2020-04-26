@@ -1,7 +1,7 @@
 ﻿using ReactiveUI;
 using System.Collections.ObjectModel;
 
-namespace FriendlyBotPluginSample.ViewModels
+namespace FriendlyBot.PluginSample.ViewModels
 {
     public class ContentViewModel : ReactiveObject
     {

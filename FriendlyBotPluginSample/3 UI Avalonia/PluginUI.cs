@@ -4,11 +4,11 @@ using FriendlyBot.API.Attributes;
 using FriendlyBot.API.Enums;
 using FriendlyBot.API.Managers.Core.Basic.Actions;
 using FriendlyBot.API.PluginsInterfaces;
-using FriendlyBotPluginSample.ViewModels;
+using FriendlyBot.PluginSample.ViewModels;
 
-[assembly: Plugin(typeof(FriendlyBotPluginSample.UIExample), PluginType.DofusBotPlugin, "UI Plugin Sample", "Mon premier plugin avec UI avalonia", "Nicogo")]
+[assembly: Plugin(typeof(FriendlyBot.PluginSample.UIExample), PluginType.DofusBotPlugin, "UI Plugin Sample", "Mon premier plugin avec UI avalonia", "Nicogo")]
 
-namespace FriendlyBotPluginSample
+namespace FriendlyBot.PluginSample
 {
     internal class UIExample : IUnloadable
     {
