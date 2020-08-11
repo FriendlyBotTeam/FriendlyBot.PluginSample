@@ -2,7 +2,7 @@
 using FriendlyBot.API.Attributes;
 using FriendlyBot.API.PluginsInterfaces;
 
-[assembly: Plugin(typeof(FriendlyBot.PluginSample.PluginMessages), FriendlyBot.API.Enums.PluginType.DofusBotPlugin, "Mon premier plugin Friendlybot qui utilise les packets", "Exemple par Nicogo", "Pseudo")]
+[assembly: Plugin(typeof(FriendlyBot.PluginSample.PluginMessages), FriendlyBot.API.Enums.PluginType.DofusApiPlugin, "Mon premier plugin Friendlybot qui utilise les packets", "Exemple par Nicogo", "Pseudo")]
 
 namespace FriendlyBot.PluginSample
 {
