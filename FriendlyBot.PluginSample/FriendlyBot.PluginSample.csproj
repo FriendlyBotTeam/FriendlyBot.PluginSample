@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <Platforms>AnyCPU</Platforms>
     <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Debug\netcoreapp3.0\win-x64\Plugins</OutputPath>
+    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Debug\netcoreapp3.1\win-x64\Plugins</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Release\netcoreapp3.0\win-x64\Plugins</OutputPath>
+    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Release\netcoreapp3.1\win-x64\Plugins</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
