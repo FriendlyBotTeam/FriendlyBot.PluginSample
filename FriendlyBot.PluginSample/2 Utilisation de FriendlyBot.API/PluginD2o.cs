@@ -15,7 +15,7 @@ namespace FriendlyBot.PluginSample
             _dofusAccount = dofusAccount;
 
             //Vous pouvez récup un D2o avec la fonction suivante et l'ID du D2o :
-            int itemId = 0;
+            int itemId = 1112;
             var item = _dofusAccount.FriendlyAccount.FriendlyBotManager.D2o.GetData<FriendlyBot.API.DofusDatas.Item>(itemId);
 
             //pour avoir les "texts" (I18N, voir google) :
