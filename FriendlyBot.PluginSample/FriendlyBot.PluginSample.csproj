@@ -37,9 +37,12 @@
     <ProjectReference Include="..\..\FriendlyBot.SimpleAPI\FriendlyBot.SimpleAPI.csproj">
       <Private>false</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\FriendlyBot\FriendlyBot.API\FriendlyBot.API.csproj">
-      <Private>false</Private>
-    </ProjectReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="FriendlyBot.API">
+      <HintPath>..\..\FriendlyBot\FriendlyBot\bin\Debug\netcoreapp3.1\win-x64\FriendlyBot.API.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

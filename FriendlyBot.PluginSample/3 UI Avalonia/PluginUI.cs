@@ -5,6 +5,7 @@ using FriendlyBot.API.Enums;
 using FriendlyBot.API.Managers.Core.Basic.Actions;
 using FriendlyBot.API.PluginsInterfaces;
 using FriendlyBot.PluginSample.ViewModels;
+using System.Threading.Tasks;
 
 [assembly: Plugin(typeof(FriendlyBot.PluginSample.UIExample), PluginType.DofusBotPlugin, "UI Plugin Sample", "Mon premier plugin avec UI avalonia", "Nicogo")]
 
@@ -23,9 +24,7 @@ namespace FriendlyBot.PluginSample
         #region Plugin
 
         private IDofusAccount _dofusAccount;
-
         private int _counter = 0;
-        private IScheduledSynchronizedAction _loop = null;
 
         UIExample(IDofusAccount dofusAccount)
         {
@@ -38,22 +37,23 @@ namespace FriendlyBot.PluginSample
             _tabItemDefinition = new TabItemDefinition(this, _headerViewModel, _contentViewModel);
             _dofusAccount.BotManager.AddTabControl(_tabItemDefinition);
 
-            _loop = dofusAccount.DofusBotManager.ActionsManager.Schedule(Update, 5000, true);
+            Update();
         }
 
-        private void Update()
+        private async void Update()
         {
-            _headerViewModel.Text = (++_counter).ToString();
-            _contentViewModel.Data.Add("ok ok : " + _counter.ToString());
-            _contentViewModel.DataWtf.Add(new HeaderViewModel() { Text = _counter.ToString() });
+            while (_dofusAccount != null)
+            {
+                _headerViewModel.Text = (++_counter).ToString();
+                _contentViewModel.Data.Add("ok ok : " + _counter.ToString());
+                _contentViewModel.DataWtf.Add(new HeaderViewModel() { Text = _counter.ToString() });
+                await Task.Delay(1000);
+            }
         }
 
         public void Unload()
         {
-            _loop.Cancel = true;
-            _loop = null;
             _dofusAccount.BotManager.RemoveTabControl(_tabItemDefinition);
-
             _dofusAccount.DofusBotManager.Logger.Add($"A + {_dofusAccount.FriendlyAccount.Username} !", LogType.Debug);
             _dofusAccount = null;
         }
