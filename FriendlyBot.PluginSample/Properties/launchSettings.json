@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "FriendlyBot.FriendlySuite": {
+    "FriendlyBot.PluginSample": {
       "commandName": "Executable",
       "executablePath": "..\\win-x64\\FriendlyBot.exe",
       "workingDirectory": "..\\..\\FriendlyBot\\FriendlyBot\\bin\\Debug\\netcoreapp3.1\\win-x64"
