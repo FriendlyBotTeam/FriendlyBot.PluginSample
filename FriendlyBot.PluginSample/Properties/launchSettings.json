@@ -1,9 +1,9 @@
 {
-    "profiles": {
-      "FriendlyBot.FriendlySuite": {
-        "commandName": "Executable",
-        "executablePath": "..\\FriendlyBot\\FriendlyBot\\bin\\Debug\\netcoreapp3.0\\win-x64\\FriendlyBot.exe",
-        "workingDirectory": "..\\..\\FriendlyBot\\FriendlyBot\\bin\\Debug\\netcoreapp3.0\\win-x64"
-      }
+  "profiles": {
+    "FriendlyBot.FriendlySuite": {
+      "commandName": "Executable",
+      "executablePath": "..\\win-x64\\FriendlyBot.exe",
+      "workingDirectory": "..\\..\\FriendlyBot\\FriendlyBot\\bin\\Debug\\netcoreapp3.1\\win-x64"
     }
+  }
 }
