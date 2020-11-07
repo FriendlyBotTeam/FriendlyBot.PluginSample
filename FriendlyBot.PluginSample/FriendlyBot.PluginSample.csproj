@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Debug\netcoreapp3.1\win-x64\Plugins</OutputPath>
+    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Debug\netcoreapp3.1\Plugins</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Release\netcoreapp3.1\win-x64\Plugins</OutputPath>
+    <OutputPath>..\..\FriendlyBot\FriendlyBot\bin\Release\netcoreapp3.1\Plugins</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -41,7 +41,7 @@
   
   <ItemGroup>
     <Reference Include="FriendlyBot.API">
-      <HintPath>..\..\FriendlyBot\FriendlyBot\bin\Debug\netcoreapp3.1\win-x64\FriendlyBot.API.dll</HintPath>
+      <HintPath>..\..\FriendlyBot\FriendlyBot\bin\Debug\netcoreapp3.1\FriendlyBot.API.dll</HintPath>
     </Reference>
   </ItemGroup>
 
