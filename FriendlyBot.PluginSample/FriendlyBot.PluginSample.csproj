@@ -34,7 +34,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\FriendlyBot.SimpleAPI\FriendlyBot.SimpleAPI.csproj">
+    <ProjectReference Include="..\..\FriendlyBot.SimpleAPI\FriendlyBot.SimpleAPI\FriendlyBot.SimpleAPI.csproj">
       <Private>false</Private>
     </ProjectReference>
   </ItemGroup>
