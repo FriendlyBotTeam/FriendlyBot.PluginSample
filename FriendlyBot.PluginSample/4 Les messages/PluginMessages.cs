@@ -37,7 +37,7 @@ namespace FriendlyBot.PluginSample
         public void SendPrivateMessage(string receiver, string content)
         {
             var message = new ChatClientPrivateMessage(); //on créer une instance du packet à envoyer
-            message.Receiver = receiver;
+            message.Receiver = new PlayerSearchCharacterNameInformation() { Name = receiver };
             message.Content = content;
             _dofusAccount.DofusBotManager.Send(message, FriendlyBot.API.Enums.SocketTarget.Server); //on l'envois au serveur
             //PS : Si vous utilisez SimpleAPI, envoyé le packet via MessageAPI.SendMessage();
@@ -47,9 +47,19 @@ namespace FriendlyBot.PluginSample
         {
             public int ProtocolId { get; } //fixé par friendlybot
             public string Content { get; set; } //le texte du message
-            public string Receiver { get; set; }//le destinataire
+            public API.DofusTypes.Common.IAbstractPlayerSearchInformation Receiver { get; set; }//le destinataire
         }
+        public class AbstractPlayerSearchInformation : API.DofusTypes.Common.IAbstractPlayerSearchInformation
+        {
+            public int ProtocolId { get; } //fixé par friendlybot
+        }
+        public class PlayerSearchCharacterNameInformation : API.DofusTypes.Common.IPlayerSearchCharacterNameInformation //maybe it's false, need to check
+        {
+            public int ProtocolId { get; } //fixé par friendlybot
 
+            public string Name { get; set; } //le nom du joueur
+        }
+        
         #endregion
     }
 }
